@@ -52,6 +52,7 @@ checkInstallLoad("ROCR")
 checkInstallLoad("nnet")
 checkInstallLoad("car")
 checkInstallLoad("Ckmeans.1d.dp")
+checkInstallLoad("psych")
 
 #For Boruta
 checkInstallLoad("Boruta")

@@ -45,4 +45,11 @@ names(dat)<-c("Material_Code","Plant","Customer_Code","Quantity_units","Turnover
 # Data cleaning complete ======================================================================
 View(head(dat))
 summary(dat)
+
+# There is some problem with assembly labour minutes and machinery minutes
+dat$Assembly_Labour_Minutes<-as.numeric(dat$Assembly_Labour_Minutes)
+dat$Machinery_Minutes<-as.numeric(dat$Machinery_Minutes)
+dat[is.na(dat)] <- 0
+summary(dat)
+
 write.csv(dat,"FinalPMSData.csv")
