@@ -28,11 +28,11 @@
 12) Suggest products with a very high profit margin and which customers to target to?
 
 ### Tasks
-| Task ID | To be done by |
-| ------ | ------ |
-| 1,2 | Mohammed |
-| 3,4 | LUCA |
-| 5,6 | Mohammed |
-| 7 | Luca |
-| 8,9 | Mohammed |
-| 10,11,12 | Important |
+| Task ID | To be done by | Done |
+| ------ | ------ | ------ |
+| 1,2 | Mohammed | Yes |
+| 3,4 | LUCA | |
+| 5,6 | Mohammed | |
+| 7 | Luca | |
+| 8,9 | Mohammed | 9 Yes |
+| 10,11,12 | Important | |
