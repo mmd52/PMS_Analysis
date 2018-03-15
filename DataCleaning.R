@@ -76,3 +76,17 @@ dat$Total_Overheads_Unit<-dat$Total_Overheads/dat$Quantity_units
 dat$Operational_Profit_Unit<-dat$Operational_Profit/dat$Quantity_units
 
 write.csv(dat,"FinalPMS_UnitINC_Data.csv")
+
+View(head(dat))
+
+
+NameList <- c("Material_Code","Plant","Customer_Code","Quantity_Units","Cost_of_Goods_Sold_EURO","
+Product_Line","Product_Type","Customer_Class","Turnover_Range_EURO","Geographical_Area","
+              Turnover_EURO_Unit","Cost_of_Goods_Sold_EURO_Unit","Total_Cost_of_Distribution_Unit","
+              Total_Customer_Order_Management_Costs_Unit","Customer_related_Issues_Cost_Unit","
+              Total_Operations_Costs_Unit","Gross_Margin_Unit","Total_Overheads_Unit","Operational_Profit_Unit")
+
+NewDF <- dat[,colnames(dat) %in% NameList] 
+
+View(head(NewDF))
+write.csv(NewDF,"Only_UnitINC_Data.csv")
