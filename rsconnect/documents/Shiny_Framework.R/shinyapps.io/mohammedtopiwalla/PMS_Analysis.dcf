@@ -1,0 +1,13 @@
+name: PMS_Analysis
+title: PMS_Analysis
+username:
+account: mohammedtopiwalla
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 307088
+bundleId: 1286395
+url: https://mohammedtopiwalla.shinyapps.io/PMS_Analysis/
+when: 1521931871.36578
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: .RData|Boruta_Results.jpeg|Boruta_Unit.jpeg|BorutaResults.csv|BorutaResults_Unit.csv|Cst_Analytics.xlsx|DataCleaning.R|EDA_TRIAL_1.R|EDA_TRIAL_2.R|EDA_TRIAL_3.R|FinalPMS_UnitINC_Data.csv|FinalPMSData.csv|Only_UnitINC_Data.csv|PMS_TableauEda_Trial1_23_02_2018.twb|README.md|RegressionUnderstanding.R|sd.csv

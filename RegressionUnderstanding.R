@@ -111,7 +111,43 @@ summary(modelSLR)
 
 # Lets try with a general model and see which additional variables make sense!
 mlr<-lm(Cost_of_Goods_Sold_EURO~Turnover_EURO
-        +Total_Cost_of_Distribution+Total_Customer_Order_Management_Costs+
-        +Total_Operations_Costs,dat=ndat)
+        +Total_Cost_of_Distribution+
+        +Total_Operations_Costs+Product_Line+Product_Type,dat=ndat)
 
 summary(mlr)
+
+
+aggregate(dat$Turnover_EURO, by=list(Category=dat$Product_Line), FUN=mean)
+
+#=============================================================================
+# Now we know that these are the best cost drivers ! but we cannot determine a new customer
+# by how much he will cost
+# We know a knew customer by his geographical area
+dat$Geographical_Area<-as.factor(dat$Geographical_Area)
+summary(dat$Geographical_Area)
+
+# We know a knew customer by class and by Turnoverrange
+dat$Customer_Class<-as.factor(dat$Customer_Class)
+summary(dat$Customer_Class)
+
+dat$Turnover_Range_EURO<-as.factor(dat$Turnover_Range_EURO)
+summary(dat$Turnover_Range_EURO)
+
+# and the plant that will be closest to him (Assuming)
+dat$Plant<-as.factor(dat$Plant)
+summary(dat$Plant)
+
+#### Can I use this for modeling -> Yes!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1
+mlr<-lm(Cost_of_Goods_Sold_EURO~Gross_Margin+Geographical_Area
+        +Customer_Class+Turnover_Range_EURO+Plant+Product_Line+Product_Type,dat=dat)
+summary(mlr)
+
+save(mlr, file = "FinalPredModel.rda")
+load("FinalPredModel.rda")
+
+mlr<-lm(Cost_of_Goods_Sold_EURO~Gross_Margin+Geographical_Area
+        +Customer_Class+Turnover_Range_EURO+Plant+Product_Line+Product_Type,dat=dat)
+summary(mlr)
+a<-predict(mlr,newdata=data.frame(Gross_Margin=474,
+                               Geographical_Area="FRA",Customer_Class="Strategic",Turnover_Range_EURO="Strategic",Plant="Northern Italy",Product_Line="Plugs and Caps",Product_Type="Spare Parts"))
+toString(a)
