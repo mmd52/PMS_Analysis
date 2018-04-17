@@ -26,13 +26,3 @@
 10) Operational profit per unit so that we can recommend which product is most profitable
 11) Why Few product lines are generating negative operational profit and what is causing this?
 12) Suggest products with a very high profit margin and which customers to target to?
-
-### Tasks
-| Task ID | To be done by | Done |
-| ------ | ------ | ------ |
-| 1,2 | Mohammed | Yes |
-| 3,4 | LUCA | |
-| 5,6 | Mohammed | |
-| 7 | Luca | |
-| 8,9 | Mohammed | 9 Yes |
-| 10,11,12 | Important | |
