@@ -13,8 +13,8 @@
   - Marco Lantermo
   - Guilia Capestro
 
-* Powerpoint for the project is [here](google.com)
-* Regression output for the project is [here](google.com)
+* Powerpoint for the project is [here](https://github.com/mmd52/PMS_Analysis/blob/master/PMS%20Final%20Assignment.pdf)
+* Regression output for the project is [here](https://github.com/mmd52/PMS_Analysis/blob/master/Regressions%20Output.pdf)
 
 ### PMS Analysis
 
